@@ -1,4 +1,4 @@
-package Java;
+package javapractice;
 
 public class HelloJava {
 

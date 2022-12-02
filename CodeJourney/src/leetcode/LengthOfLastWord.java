@@ -1,4 +1,4 @@
-package Leetcode;
+package leetcode;
 
 /*Input: s = "   fly me   to   the moon  "
 Output: 4
