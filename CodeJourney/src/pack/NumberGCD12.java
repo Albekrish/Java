@@ -18,25 +18,37 @@ public class NumberGCD12 {
 		//int b=sc.nextInt();
 		
 		//Find the smallest no. using ternary to find the GCD easily
+		
+		/*
+		 * while(min>=2) { if((a%min==0) && (b%min==0)) { break; } min--; }
+		 * 
+		 * System.out.println("GCD:"+min);
+		 * 
+		 * // sum of the digit
+		 * 
+		 * //while(t)
+		 */	
 		int a=45;
 		int b=30;
+		int comm=0;
+		int c= a<b?a:b; //or Math.min(a,b);
+	
+		for(int i=c;i>=2;i--) {
+			if((a%i == 0) && (b%i == 0)) {
+				comm=i;
+				break;
+			}			
+		}
+		System.out.println(comm);
 		
-		int min= a<b?a:b; //or Math.min(a,b);
-		
-		 while(min>=2)  
-		 {		
-			if((a%min==0) && (b%min==0)) 
-			{
-			 break;
-			}
-			min--;
-		 }
-		 
-		System.out.println("GCD:"+min);
-		
-		// sum of the digit
-		
-		//while(t)
-	}
+		//Sum of digit
+		int n=a, sum=0;
+		while(n>0) {
+			int rem=n%10;
+			sum += rem;
+			n=n/10;
+		}
+		System.out.println(sum);
 
+}
 }

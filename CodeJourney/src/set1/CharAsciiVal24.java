@@ -14,7 +14,11 @@ public class CharAsciiVal24 {
 		//Method2: using typecasting
 		int ch='a';
 		System.out.println(ch);
-
+		
+		char n=5;
+		
+		System.out.println(1+n); //int value
+		System.out.println('0'+n); //ascii 0=48+5
 	}
 	//0-9  -> 48 to 57
 	//a-z  -> 97 to 122

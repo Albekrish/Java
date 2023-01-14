@@ -15,18 +15,37 @@ public class ArraySort10 {
 		
 		Arrays.sort(a);
 		
-		int i=0,j=n-1;  //{1,2,3,4,6,7,8,9}  i<j
+		/*
+		 * int i=0,j=n-1; //{1,2,3,4,6,7,8,9} i<j
+		 * 
+		 * while(i<j) { System.out.print(a[j]+" "); System.out.print(a[i]+" "); j--;
+		 * i++; }
+		 * 
+		 * if(n%2 !=0) { System.out.print(a[i]); }
+		 */
 		
-		while(i<j) {
-			System.out.print(a[j]+" ");
-			System.out.print(a[i]+" ");
-			j--;
+		int li=0;
+		int ri=a.length-1;		
+		boolean flag=true;
+		
+		int[] res=new int[a.length];
+		int i=0;
+		while(li<ri) {
+			if(flag) {
+				res[i]=a[ri];
+				ri--;
+			}else {
+				res[i]= a[li];
+				li++;
+			}
 			i++;
+			flag=!flag;
 		}
+		if(li==ri) {
+			res[i]=a[li];  //for odd ordered element
+		}
+		System.out.println(Arrays.toString(res));
 		
-		if(n%2 !=0) {
-			System.out.print(a[i]);
-		}
 		
 	}
 

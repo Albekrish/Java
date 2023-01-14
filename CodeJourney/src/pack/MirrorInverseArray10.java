@@ -20,7 +20,7 @@ So, the inverse array is equal to the given array.*/
 public class MirrorInverseArray10 {
 
 	public static void main(String[] args) {
-		int[] a= {3,4,2,0,1};
+		int[] a= {2,4,2,0,1};
 		boolean flag=true;
 		for(int i=0;i<a.length;i++) {
 			if(a[a[i]] != i) {				

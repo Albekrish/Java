@@ -22,13 +22,21 @@ public class ArrayEleFrq42 {
 	    		hm.put(a[i], 1);
 	    	}
 	    }
+	    
+		/*
+		 * for(int i:a) { if(hm.containsKey(i)) { hm.put(i,hm.get(i)+1); }else {
+		 * hm.put(i, 1); } }
+		 */
 	
 	    for(Map.Entry<Integer, Integer> e:hm.entrySet())
 	    {
 				System.out.println(e.getKey()+"-"+e.getValue()); 
 		 
-	     }
+	    }
 
+			/*
+			 * for(Integer e:hm.keySet()) { System.out.println(e+"-"+hm.get(e)); }
+			 */
 	}
 
 }

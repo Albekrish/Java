@@ -17,7 +17,7 @@ public class ArmstrongNum1 {
 		int sum=0,rem=0;
 		while(n>0) {
 			rem=n%10;
-			sum += (rem*rem*rem);
+			sum += (rem*rem*rem);  //Math.pow(rem,3);
 			n=n/10;
 		}
 		System.out.println(sum);

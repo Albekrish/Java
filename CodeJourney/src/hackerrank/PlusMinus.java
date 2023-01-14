@@ -43,6 +43,7 @@ class Result {
         System.out.printf("%.6f", x/arr.size());
         
     }
+	
 
 }
 

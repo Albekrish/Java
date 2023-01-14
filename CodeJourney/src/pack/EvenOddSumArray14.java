@@ -41,8 +41,8 @@ public class EvenOddSumArray14 {
 		System.out.println("Sum of even no.:"+even);
 		System.out.println("Sum of odd no.:"+odd);
 		
-		System.out.println("Sum of even position.:"+even);
-		System.out.println("Sum of odd position.:"+odd);
+		System.out.println("Sum of even position.:"+even1);
+		System.out.println("Sum of odd position.:"+odd1);
 	}
 
 }

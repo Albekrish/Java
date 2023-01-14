@@ -39,6 +39,8 @@ public class ArrayRotateLeftMulti11 {
 				li++;
 				ri--;
 			}
+			
+			
 		}
 		
 		//To display

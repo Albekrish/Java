@@ -33,6 +33,10 @@ public class Pattern48 {
 				System.out.print(n-j+1+" ");
 				
 			}
+			//or
+			/*
+			 * for(int j=i;j>1;j--) { System.out.print(n+2-j+" "); }
+			 */
 		 System.out.println(" ");		
 		
 		}

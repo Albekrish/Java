@@ -12,41 +12,39 @@ public class HighNumArray13 {
 
 	public static void main(String[] args) {
 		
-		int a[]= {3,46,89,6,45,33,98,1,0,-1,87};
-		
+		int a[]= {3,46,89,6,45,33,98,1,0,-1,87};		
 		int n=a.length;
-		System.out.println(n);
+		
+		for(int i=0;i<n;i++) {
+			for(int j=i+1;j<n;j++) {
+				if(a[i] > a[j]){
+					int temp=a[i];
+					a[i]=a[j];
+					a[j]=temp;
+				}
+			}
+		}
+		
+		for(int i=0;i<n;i++) {
+			System.out.print(a[i]+" ");
+		}
+		System.out.println();
+		System.out.println(a[n-4]);
+		
+		
 		/*
-		        // Sort the array 'arr' elements in ascending order
-		        // using nested for loops
-		        for (int i = 0; i < length; i++) {
-		            for (int j = i + 1; j < length; j++) {
-		                if (array[i] > array[j]) {
-		                    temporary = array[i];
-		                    array[i] = array[j];
-		                    array[j] = temporary;
-		                }
-		            }
-		        } */
-		//METHOD1: Sort
-		Arrays.sort(a);
-		// Sorting the array in descending order
-		//  Arrays.sort(a, Collections.reverseOrder());
-			
-		System.out.println("sorted array"+Arrays.toString(a));
-		System.out.println("fourth largets element:"+ a[n-4]);
-		
-		//METHOD 2: collection
-		Integer b[]= {3,46,89,6,45,33,98,1,0,-1,87};
-		int num=b.length;
-		List <Integer> list= Arrays.asList(b);
-		Collections.sort(list);
-		// Collections.sort(list, Collections.reverseOrder());
-		
-		int max=list.get(num-4);
-		System.out.println("fourth largets element:"+ max);
+		 * Arrays.sort(a);    //reverse --> Arrays.sort(a, Collections.reverseOrder());
+		 * System.out.println(Arrays.toString(a));
+		 * System.out.println(a[n-4]);
+		 */
 		
 		
+		/*
+		 * Integer b[]= {3,46,89,6,45,33,98,1,0,-1,87}; List<Integer> al=
+		 * Arrays.asList(b); Collections.sort(al);   //reverse--> Collections.sort(list, Collections.reverseOrder());
+		 * System.out.println(al.get(al.size()-4));
+		 */
 	}
 
 }
+	

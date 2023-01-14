@@ -24,12 +24,10 @@ public class SeriousSum60 {
 			j= (j*10)+1;
 		}				
 		System.out.println("The sum is:"+sum);
-		int temp=0, sum1=0;
-		for(int i=1;i<=n;i++) {
-			temp= (temp*10)+1;
-			sum1 += temp;		
-		}
-		System.out.println(sum1);
+		/*
+		 * int temp=0, sum1=0; for(int i=1;i<=n;i++) { temp= (temp*10)+1; sum1 += temp;
+		 * } System.out.println(sum1);
+		 */
 	}
 
 }
