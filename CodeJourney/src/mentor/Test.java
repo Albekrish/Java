@@ -1,4 +1,4 @@
-package Mentor;
+package mentor;
 
 import java.util.Scanner;
 
