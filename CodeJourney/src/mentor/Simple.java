@@ -3,7 +3,15 @@ package mentor;
 public class Simple {
 	private String fruit;
 	private String size;
+	private String color;
 	
+	
+	public Simple(String fruit, String size, String color) {
+		super();
+		this.fruit = fruit;
+		this.size = size;
+		this.color = color;
+	}
 	
 	public String getFruit() {
 		return fruit;
@@ -23,5 +31,5 @@ public class Simple {
 	public void setColor(String color) {
 		this.color = color;
 	}
-	private String color;
+	
 }

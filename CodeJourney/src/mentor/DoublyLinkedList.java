@@ -1,7 +1,5 @@
 package mentor;
 
-import mentor.SinglyLinkedList.Node;
-
 public class DoublyLinkedList {
 	
 	class Node{
@@ -9,70 +7,117 @@ public class DoublyLinkedList {
 		Node previous;
 		Node next;
 		
-		public Node(int data) {
-			this.data=data;
+		public Node(int d) {
+			data=d;
 		}
 	}
 	
-	public Node head=null;
-	public Node tail=null;
-	int count=0;
-	
-	public void insertNode(int data) {
+	Node head;
+	public void insertNode(int data) {  //insert at the beginning
 		Node newNode=new Node(data);
 		
-		if(head == null) {
-			head=tail=newNode;
-			head.previous=null;
-			tail.next=null;
-		}else {
-			tail.next=newNode;
-			newNode.previous=tail;
-			tail=newNode;
-			tail.next=null;
+		newNode.next=head;
+		newNode.previous=null;
+		
+		if(head != null) {
+			head.previous=newNode;
 		}
-		count++;
+		head=newNode;
 	}
 	
-	//insert at given position (use count for list length)
-	public void insertAtPosition(int data, int position) {
-		if(position > count+1 || position < 1) {
-			System.out.println("Invalid Position");
-		}else {
-			Node newNode= new Node(data);
-			if(position == 1) {
-				newNode.next=head;
-				head.previous=newNode;
-				head=newNode;
-			}/*else {
-				Node previous=head;
-				int current_pos=1;
-					
-				while(current_pos < position-1) {
-					previous=previous.next;
-					current_pos++;
-				}
-					
-				Node current=previous.next;
-				newNode.next=current;
-				previous.next=newNode;
-			}
-			count++; */
+	public void insertAfterNode(Node prev_node, int data) { //insert after the given node
+		if(prev_node == null) {
+			System.out.println("Previous Node cant be null");
+			return;
 		}
-	}
 		
-	public void display() {
-		Node current=head;
+		Node new_node= new Node(data);
+		
+		new_node.next=prev_node.next;
+		prev_node.next=new_node;
+		new_node.previous=prev_node;
+		
+		if(new_node.next != null) {
+			new_node.next.previous=new_node;
+		}
+		
+	}
+	
+	public void insertLast(int data) {
+		Node new_node=new Node(data);
+		
+		Node last=head;
+		
+		new_node.next=null;
 		
 		if(head == null) {
-			System.out.println("List is empty");			
-		}else {	
-			System.out.println("Nodes of doubly linked list: ");
-			while(current != null) {
-				System.out.print(current.data+" ");
-				current=current.next;
-			}
-			System.out.println();
+			new_node.previous=null;
+			head= new_node;
+			return;
+		}
+		
+		while(last.next != null) {
+			last=last.next;
+		}
+		
+		last.next=new_node;
+		new_node.previous=last;
+	}
+	
+	public void insertBeforeNode(Node next_node,int data) {
+		
+		if(next_node == null) {
+			System.out.println("The next node can't be null");
+			return;
+		}
+		
+		Node new_node= new Node(data);
+		new_node.previous=next_node.previous;
+		next_node.previous=new_node;
+		new_node.next=next_node;
+		
+		if(new_node.previous != null) {
+			new_node.previous.next=new_node;		
+		}else {
+			head=new_node;
+		}
+	}
+	
+	public void deleteNode(Node del_node) {
+	 
+		if(head == null || del_node== null) {
+			return;
+		}
+		
+		if(head == del_node) {
+			head= del_node.next;
+		}
+		
+		if(del_node.next != null) {
+			del_node.next.previous=del_node.previous;
+		}
+		
+		if(del_node.previous != null) {
+			del_node.previous.next=del_node.next;
+		}
+		
+		return;
+	}
+	
+	public void display(Node node) {
+		Node last=null;
+		System.out.println("Traversal in forward direction: ");
+		
+		while(node != null) {
+			System.out.print(node.data+" ");
+			last=node;
+			node=node.next;
+		}
+		System.out.println();
+		System.out.println("Traversal in reverse direction: ");
+		while(last != null) {
+			System.out.print(last.data+" ");
+			last=last.previous;
 		}
 	}
 	public static void main(String[] args) {
@@ -81,9 +126,16 @@ public class DoublyLinkedList {
 		list.insertNode(2);
 		list.insertNode(3);
 		list.insertNode(4);
-		list.insertNode(5);		
-		list.display();
+		list.insertNode(5);
 		
+		System.out.println("Doubly Linked list :");
+		list.display(list.head);
+		
+		list.deleteNode(list.head);
+		
+		System.out.println();
+		System.out.println("Doubly LL after deletion: ");
+		list.display(list.head);
 	}
 
 }

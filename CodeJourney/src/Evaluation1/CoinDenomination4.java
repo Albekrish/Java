@@ -1,11 +1,6 @@
 package Evaluation1;
 
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.Map;
-
 public class CoinDenomination4 {
-
 
 	public static void main(String[] args) {
 		int total_amount=56, sum=0;

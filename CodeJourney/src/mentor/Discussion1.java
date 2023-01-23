@@ -5,7 +5,7 @@ public class Discussion1 {
 public static void main(String[] args) {
 
 	
-		String x = "abc";
+	/*	String x = "abc";
 		String y = "abc";
 		x.concat(y);
 		System.out.print(x);
@@ -45,7 +45,7 @@ public static void main(String[] args) {
 	                gfg(null);
 	            }
 	        }
-	        
+	      */  
 	        
 	}
 
