@@ -6,7 +6,7 @@ public class EquationEval1 {
 
 	public static void main(String[] args) {
 		
-		String s="(a+b)(a*b)";	
+		String s="(a+b)";	
 		if(validParenthesis(s) && validEquation(s)) {
 			System.out.println("Valid");
 		}else {

@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.Stack;
 
-public class CustomerCareApp {
+public class CustomerCareAppStack {
 	
 	static Scanner scanner = new Scanner(System.in);
 	Stack<Map<Integer,String>> stack = new Stack<>(); //Map<Integer,String>
@@ -14,7 +14,7 @@ public class CustomerCareApp {
 	Map<Integer,String> langList = new LinkedHashMap<>();
 	Map<Integer,String> userOptions = new LinkedHashMap<>();
 	
-	public CustomerCareApp() {
+	public CustomerCareAppStack() {
 		langList.put(1,"Tamil");
 		langList.put(2,"English");
 		langList.put(3,"French");
@@ -27,7 +27,7 @@ public class CustomerCareApp {
 	}
 	
 	public static void main(String[] args) {
-		CustomerCareApp stackApp = new CustomerCareApp();
+		CustomerCareAppStack stackApp = new CustomerCareAppStack();
 		stackApp.start();
 		
 	}
@@ -39,22 +39,28 @@ public class CustomerCareApp {
 		while (inp != 0) {
 			System.out.println("Select option to proceed : " + currentOption.toString());
 			inp = scanner.nextInt();
-			if(inp == 9) {
-				currentOption = stack.pop();
-			}
-			else {
-				stack.push(currentOption);
-				
-				if(currentOption.containsValue("Tamil")){
-					currentOption = new HashMap<>();
-					currentOption.putAll(userOptions);
-				} else if (currentOption.containsValue("Call Options")) {
-					currentOption = new HashMap<>();
-					currentOption.put(0, "Exit");
-					currentOption.put(9, "Previous");
-				}
-				
-			}
+			if(currentOption.containsKey(inp)) {
+				if(inp == 9) {
+					currentOption = stack.pop();					
+					if(stack.isEmpty()) {
+						break;
+					}
+					
+				}else {
+					stack.push(currentOption);
+					
+					if(currentOption.containsValue("Tamil") || currentOption.containsValue("English") || currentOption.containsValue("French")){
+						currentOption = new HashMap<>();
+						currentOption.putAll(userOptions);
+					} else if (currentOption.containsValue("Call Options") || currentOption.containsValue("Recharge Options") || currentOption.containsValue("CallerTune Options")){
+						currentOption = new HashMap<>();
+						currentOption.put(0, "Exit");
+						currentOption.put(9, "Previous");
+					}
+				}					
+			}else{
+				System.out.println("Please provide the correct input to proceed");
+		}
 			
 		}
 	}

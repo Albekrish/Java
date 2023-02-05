@@ -23,7 +23,7 @@ public class CoinDenomination4 {
 		
 		for(int i=value.length-2;i>=0;i--) {
 			if(remain_added >= value[i]) {
-				remain_added -= value[i];
+				remain_added -= value[i];				
 				total_coin++;
 			}else {
 				continue;

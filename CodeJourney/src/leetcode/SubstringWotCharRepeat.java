@@ -27,6 +27,15 @@ public class SubstringWotCharRepeat {
 			}
 		}
 		System.out.println(max);
+		
+		/*//1374. Generate a String With Characters That Have Odd Counts
+
+		 * char[] ch=new char[n];
+		 * 
+		 * Arrays.fill(ch,'a');
+		 * 
+		 * if(n%2 ==0){ ch[ch.length-1]='b'; } return new String(ch);
+		 */
 	}
 
 }
