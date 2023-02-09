@@ -26,8 +26,8 @@ public class ValidParentheses {
 				if(c!='}' && stack.peek()=='{') return false;
 				if(c!=']' && stack.peek()=='[') return false;
 				stack.pop();
-		}		       
-    }
+			}		       
+		}
 	return stack.isEmpty(); 
 	}
 }

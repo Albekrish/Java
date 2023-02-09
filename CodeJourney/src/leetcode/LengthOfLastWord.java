@@ -15,11 +15,11 @@ public class LengthOfLastWord {
 	public static int lengthOfLastWord(String s) {
 		
 		//method 1
-		//String[] words= s.split(" ");
-		//return words.length == 0? 0:words[words.length-1].length();
+		String[] words= s.split(" ");
+		return words.length == 0? 0:words[words.length-1].length();
 		
 	    //method 2
-		return s.trim().length()-s.trim().lastIndexOf(" ")-1;
+		//return s.trim().length()-s.trim().lastIndexOf(" ")-1;
 		
 			
 	}

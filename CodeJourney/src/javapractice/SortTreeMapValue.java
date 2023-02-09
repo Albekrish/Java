@@ -72,15 +72,15 @@ public class SortTreeMapValue {
 	        Collections.sort(list, new Comparator<Entry<String,Integer>>(){
 	        	@Override
 	        	public int compare(Entry<String,Integer> e1, Entry<String,Integer> e2) {
-	        		return e1.getValue()-e2.getValue();
+	        		return e1.getValue()-e2.getValue(); // e1.getValue().compareTo(e2.getValue());
 	        	}
 	        		
 	        });
 	        
 	        LinkedHashMap<String, Integer> lhm=new LinkedHashMap<>();
 	        
-	        for(Entry<String, Integer> e: list) {
-	        	lhm.put(e.getKey(), e.getValue());
+	        for(Entry<String, Integer> e: list) {	        	
+	        	lhm.put(e.getKey(), e.getValue());	        	
 	        }
 	        
 	        System.out.println(lhm);
