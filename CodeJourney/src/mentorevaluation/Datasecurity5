@@ -1,0 +1,15 @@
+Encoding:
+ 	-It is the process of converting text/data file into some other universally accepted formats like UTF, ASCII, etc. 
+ 	-API -> URL->UTF8 encoding
+
+Encryption:
+	-It is the technique to completely modify data into some other format with the help of key (which is known only by the 
+	client who will be decrypting the data). This is mainly used for data security.
+	-This is so important during file transfer to avoid data theft.
+
+Hashing:
+	-Hashing is a technique/algorithm to convert the data into another format that can be used for grouping.
+	-We always have to choose proper hashing technique to avoid collision.
+
+	-In java, we use hashing to find the position/index of data to be stored in hash table.	Here key/element is used to 
+	find index using hashing function and stored in hash table like key-value pair. This helps in faster retrieval of data. 

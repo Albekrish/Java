@@ -9,10 +9,10 @@ public class SimpleJson {
 		
 		String SimpleJson
         = "{\"fruit\" : \"Apple\", \"size\" : \"Large\", \"color\" : \"Red\"}";
-		Gson gson = new Gson();
+	//	Gson gson = new Gson();
 		
-		Simple simple=new Gson().fromJson(SimpleJson, Simple.class);
-		System.out.println(simple);
+		//Simple simple=new Gson().fromJson(SimpleJson, Simple.class);
+		//System.out.println(simple);
 		
 	}
 

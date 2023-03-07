@@ -33,7 +33,7 @@ class Child  {
 public class Main {
 	public static void main(String[] args) {
 		// Parent object=new Parent();
-		Child object1 = new Child();
+		//Child object1 = new Child();
 		// GrandParent obj=new Child();
 		// Child obj1=new Child();
 		// System.out.println(object.b);
@@ -41,6 +41,6 @@ public class Main {
 		// System.out.println(obj.b);
 		// System.out.println(obj1.b);
 		// obj.display();
-		object1.display();
+		//object1.display();
 	}
 }

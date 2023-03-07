@@ -1,0 +1,18 @@
+Different between abstract and Interface:
+
+Abstract:
+-Contains abstract and concrete methods.
+-It have constructor and almost act as normal class but we can't create object.
+-Multiple inheritance problem will occur.
+-Mostly preferred for noun type of data (eg. while booking tickets, we can 
+give discount to passenger based on age, membership, etc. here we can keep 
+discount method as abstract in Passenger.class)
+
+Interface:
+-contains abstract, default and static methods
+-It don't have constructor and it is a special type of class.
+-By default, variables are public static final (i.e constant)
+-By default, methods are public abstract  & for other methods, must to 
+define default/ static along with method name.
+-Supports multiple inheritance problem.
+-Mostly we prefer for action type of methods (eg. button submit)
