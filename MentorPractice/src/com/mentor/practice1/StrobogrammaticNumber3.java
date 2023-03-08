@@ -1,4 +1,4 @@
-package com.mentor;
+package com.mentor.practice1;
 
 public class StrobogrammaticNumber3 {
 

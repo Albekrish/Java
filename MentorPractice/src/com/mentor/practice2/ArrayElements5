@@ -1,0 +1,4 @@
+Array elements are stored in Sequential/Random location ?
+
+In java, Array elements are stored in sequential location.
+Array elements are arranged in contiguous memory location so, index based search is so fast.
