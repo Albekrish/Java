@@ -11,11 +11,13 @@ public class MulDiv4 {
 		int n=sc.nextInt();
 		int multi=15;
 		int method1=0;
+		//method1: using adding
 		for(int i=0;i<multi;i++)
 		{
 			method1+=n;
 		}
 		System.out.println("method 1 -->"+ method1);
+		//method2: using shiftoperator
 		int method2=(n<<4)-n;
 		System.out.println("method2-->"+method2);
 		

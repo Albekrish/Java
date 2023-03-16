@@ -5,7 +5,11 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Anagrams {
-	
+	public static void main(String[] args) {
+		Anagrams a=new Anagrams();
+		List<Integer> s= a.findAnagrams("listen", "silent");
+		System.out.println(s);
+	}
 	    public List<Integer> findAnagrams(String s, String p) {
 	        List<Integer> list=new ArrayList<>();
 	        int slength=s.length();

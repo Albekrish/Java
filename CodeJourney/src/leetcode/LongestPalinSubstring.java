@@ -1,7 +1,7 @@
 package leetcode;
 
 
-public class LongestPalinSubstring {
+ public class LongestPalinSubstring {
 	
     static int longestPalSubstr(String str)
     {
@@ -41,7 +41,8 @@ public class LongestPalinSubstring {
     {
  
        // String str = "forgeeksskeegfor";
-    	String str="babad";
+    	//String str="babad";
+    	String str="aaaabbaa";
         System.out.println("Length is: "
                            + longestPalSubstr(str));
     }
